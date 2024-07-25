@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content p-3">
+            <form action="/register" method="post">
+            <h3 class="text-dark text-center">Grade Volleyball Registration</h3>
+                <div class="row">
+                    <label>Participant Name</label>
+                    <div class="col-6 name">
+                        <input class="form-control border border-success" type="text" id="fname" name="firstName" placeholder="first" required>
+                    </div>
+                    <div class="col-6 name">
+                        <input class="form-control border border-success" type="text" id="lname" name="lastName" placeholder="last">
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="mt-3">Age</label>
+                        <input type="number" class="form-control border border-success" name="age" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="mt-3">City</label>
+                        <select name="city" id="city" class="form-control border border-success" required>
+                            {{#each cities}}
+                            <option>{{this}}</option>
+                            {{/each}}
+
+                        </select>
+                    </div>
+                    <label class="mt-3">Parent Name</label>
+                    <div class="col-6 name">
+                        <input class="form-control dropdown border border-success" type="text" id="parant-fname" name="pFirstName" placeholder="first">
+                    </div>
+                    <div class="col-6 name">
+                        <input class="form-control border border-success" type="text" id="parant-lname" name="pLastName" placeholder="last">
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-success mt-3 form-control d-block" type="submit">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
